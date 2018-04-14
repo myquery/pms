@@ -1,0 +1,17 @@
+  .login-header{
+      max-height: 100px;
+      z-index: 1030;
+      background: darkgreen;
+      height: 50px;
+      box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      color: white;
+      line-height: 6rem;
+      transform: translateY(0);
+      transform: translate3d(0,0,0);
+      transition: .25s transform;
+      backface-visibility: hidden;
+  }

@@ -1,0 +1,137 @@
+ <!-- Morris chart - Sales -->
+  <div class="col-md-12 content" >
+              <div class="box-header " >
+            <i class="fa fa-user-o"></i>
+
+            <h3 class="box-title">Create New Company</h3>
+                  <!-- Tabs within a box -->
+          
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+              <!--<button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove">
+                  <i class="fa fa-times"></i></button>
+            </div>-->
+            <!-- /. tools -->
+          </div>
+              </div>
+          <div class="box-body">
+           
+            <form [formGroup] = "createCoy" (ngSubmit)="addCompany(createCoy.value, $event); createCoy.reset()" style="width: 80% !important" novalidate>
+              <div class="form-group">
+                <label>Company Name</label>
+                <input type="text" formControlName = "name" class="form-control" name="name" placeholder="Company Name" required>
+                 <div *ngIf="formErrors.name" class="label label-danger">
+                    {{ formErrors.name }}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>Tin Number</label>
+                <input type="text" formControlName = "tin" class="form-control" name="tin" placeholder="Tin Number" required>
+                 <div *ngIf="formErrors.tin" class="label label-danger">
+                    {{ formErrors.tin }}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>Company RegNo.</label>
+                <input type="text" formControlName = "registrationNumber" class="form-control" name="registrationNumber" placeholder="registration Number" required>
+                 <div *ngIf="formErrors.registrationNumber" class="label label-danger">
+                    {{ formErrors.registrationNumber }}
+                  </div>
+              </div>
+              <div formGroupName="contactInfo" class="well well-lg">
+                <label class="panel-header">Company Contact Information</label>
+                 <hr>
+              <div class="form-group">
+                <label>Street 1</label>
+                <input type="text" formControlName = "street1" class="form-control" name="street1" placeholder="First Street Address" required>
+                 <div *ngIf="formErrors.contactInfo.street1" class="label label-danger">
+                    {{ formErrors.contactInfo.street1 }}
+                  </div>
+              </div>
+               <div class="form-group">
+                <label>Street 2</label>
+                <input type="text" formControlName = "street2" class="form-control" name="street2" placeholder="First Street Address" >
+              </div>
+
+              <div class="form-group">
+                <label>City</label>
+                <input type="text" formControlName = "city" class="form-control" name="city" placeholder="Company city" required>
+                 <div *ngIf="formErrors.contactInfo.city" class="label label-danger">
+                    {{ formErrors.contactInfo.city }}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>State</label>
+                <input type="text" formControlName = "state" class="form-control" name="state" placeholder="State" required>
+                 <div *ngIf="formErrors.contactInfo.state" class="label label-danger">
+                    {{ formErrors.contactInfo.state}}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>Country</label>
+                <input type="text" formControlName = "country" class="form-control" name="country" placeholder="Country" required>
+                 <div *ngIf="formErrors.contactInfo.country" class="label label-danger">
+                    {{ formErrors.contactInfo.country}}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="text" formControlName = "email" class="form-control" name="email" placeholder="Email">
+                 <!--<div *ngIf="formErrors.contactInfo.country" class="label label-danger">
+                    {{ formErrors.contactInfo.country}}
+                  </div>-->
+              </div>
+              <div class="form-group">
+                <label>Phone</label>
+                <input type="text" formControlName="phone" class="form-control" name="phone" placeholder="Phone">
+              </div>
+              <div class="form-group">
+                <label>Website</label>
+                <input type="text" formControlName="website" class="form-control" name="website" placeholder="website">
+              </div>
+              </div>
+               <div formGroupName="contactPerson" class="well well-lg">
+                  <label >Contact Person  Information</label>
+                  <hr>
+               <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" formControlName = "fullName" class="form-control" name="fullName" placeholder="Full Name" required>
+                 <div *ngIf="formErrors.contactPerson.fullName" class="label label-danger">
+                    {{ formErrors.contactPerson.fullName}}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>Job Title</label>
+                <input type="text" formControlName = "jobTitle" class="form-control" name="jobTitle" placeholder="Job Title" required>
+                 <div *ngIf="formErrors.contactPerson.jobTitle" class="label label-danger">
+                    {{ formErrors.contactPerson.jobTitle}}
+                  </div>
+              </div>
+               <div class="form-group">
+                <label>Email</label>
+                <input type="text" formControlName = "email" class="form-control" name="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                <label>Phone</label>
+                <input type="text" formControlName = "phone" class="form-control" name="phone" placeholder="Phone">
+                </div>
+                <div class="form-group">
+                <label>Office Extension</label>
+                <input type="text" formControlName = "extension" class="form-control" name="extension" placeholder="Office Phone Extension">
+                </div>
+
+               </div>
+             
+<!--            
+              <div>
+                <textarea class="textarea" placeholder="Role Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </div>-->
+              <div class="box-footer clearfix">
+                <button type="submit" class="pull-right btn btn-default" id="sendEmail">Create Company
+                    <i class="fa fa-arrow-circle-right"></i></button>
+              </div>
+            </form>
+          </div>
+        
+        </div>
+        

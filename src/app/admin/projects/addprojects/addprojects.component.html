@@ -1,0 +1,106 @@
+ <!-- Morris chart - Sales -->
+  <div class="col-md-12 content" >
+              <div class="box-header " >
+            <i class="fa fa-user-o"></i>
+
+            <h3 class="box-title">Create New Project</h3>
+                  <!-- Tabs within a box -->
+          
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+              <!--<button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove">
+                  <i class="fa fa-times"></i></button>
+            </div>-->
+            <!-- /. tools -->
+          </div>
+              </div>
+          <div class="box-body">
+           
+            <form [formGroup] = "project" (ngSubmit)="addProject(project.value, $event); project.reset()" style="width: 80% !important" novalidate>
+              <div class="form-group">
+                <label>Project Title</label>
+                <input type="text" formControlName = "title" class="form-control" name="title" placeholder="Project Title" required>
+                 <div *ngIf="formErrors.title" class="label label-danger">
+                    {{ formErrors.title }}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>Lot Number</label>
+                <input type="text" formControlName = "lotNumber" class="form-control" name="lotNumber" placeholder="Lot Number" required>
+                 <div *ngIf="formErrors.lotNumber" class="label label-danger">
+                    {{ formErrors.lotNumber }}
+                  </div>
+              </div>
+                <div class="form-group">
+                  <label>Department</label>
+                  <select formControlName = "department" class="form-control" name="department" >
+                    <option><strong> --Select Department--</strong></option>
+                    <option *ngFor="let dept of departmentLabel" [value]="dept._id">{{dept.departmentName}}</option>
+              
+                  </select>
+                </div>
+             
+              <div class="form-group">
+                <label>Description</label>
+                <textarea type="text" formControlName = "description" class="form-control" name="description" placeholder="Add Description to Project" ></textarea>
+                 <div *ngIf="formErrors.description" class="label label-danger">
+                    {{ formErrors.description }}
+                  </div>
+              </div>
+               <div class="form-group">
+                <label>Approval Threshold</label>
+                <input type="text" formControlName = "approvalThreshold" class="form-control" name="approvalThreshold" placeholder="Project Approval Threshold" >
+              </div>
+
+              <div class="form-group">
+                  <label>Procurement method</label>
+                  <select formControlName = "procurementMethod" class="form-control" name="procurementMethod" placeholder="Add Procurement Method" required>
+                    <option><strong> --Select Method --</strong></option>
+                    <option *ngFor="let method of procurementMethod" [value]="method._id">{{method.name}}</option>
+              
+                  </select>
+                  <div *ngIf="formErrors.procurementMethod" class="label label-danger">
+                    {{ formErrors.procurementMethod }}
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Project Group</label>
+                  <select formControlName = "group" class="form-control" name="procurementMethod"  required>
+                    <option><strong> --Select Method --</strong></option>
+                    <option *ngFor="let group of projectGroup" [value]="group._id">{{group.name}}</option>
+              
+                  </select>
+                  <div *ngIf="formErrors.group" class="label label-danger">
+                    {{ formErrors.group }}
+                  </div>
+                </div>
+              <div class="form-group">
+                <label>Bid Opening Date</label>
+                <input type="date" formControlName = "bidOpeningDate" class="form-control" name="bidOpeningDate" placeholder="Bid Date" required>
+                 <div *ngIf="formErrors.bidOpeningDate" class="label label-danger">
+                    {{ formErrors.bidOpeningDate}}
+                  </div>
+              </div>
+           
+              <div class="form-group">
+                <label>Bid Evaluation Date</label>
+                <input type="date" formControlName = "bidEvaluationReportDate" class="form-control" name="bidEvaluationReportDate" placeholder="Bid Evaluation Report Date">
+                 
+              </div>
+              <div class="form-group">
+                <label>Budgetary Provision</label>
+                <input type="text" formControlName="budgetaryProvision" class="form-control" name="budgetaryProvision" placeholder="Budgetary Provision" required>
+              <div *ngIf="formErrors.budgetaryProvision" class="label label-danger">
+                    {{ formErrors.budgetaryProvision}}
+                  </div>
+              </div>
+           
+              <div class="box-footer clearfix">
+                <button type="submit" class="pull-right btn btn-default" id="sendEmail">Create Project
+                    <i class="fa fa-arrow-circle-right"></i></button>
+              </div>
+            </form>
+          </div>
+        
+        </div>
+        

@@ -1,0 +1,16 @@
+.tools a{
+    width: auto !important;
+    font-size: 10px !important
+
+    
+}
+
+.content{
+    background: #fff !important;
+    margin-bottom: 10% !important
+}
+.content form{
+    margin-right: auto !important;
+    margin-left: auto !important;
+    display: block
+}

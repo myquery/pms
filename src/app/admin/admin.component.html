@@ -1,0 +1,16 @@
+<div class="wrapper" style="background: #f3f3f3 !important">
+
+  <app-admin-header></app-admin-header>
+  <ng2-slim-loading-bar [color]="'greenyellow'" [height]="'4px'"></ng2-slim-loading-bar>
+  <!-- Left side column. contains the logo and sidebar -->
+  <app-admin-left-side></app-admin-left-side>
+
+  <!-- Content Wrapper. Contains page content -->
+  <router-outlet></router-outlet>
+  <!-- /.content-wrapper -->
+  <app-admin-footer></app-admin-footer>
+
+  <!-- Control Sidebar -->
+  <app-admin-control-sidebar></app-admin-control-sidebar>
+  <!-- /.control-sidebar -->
+</div>

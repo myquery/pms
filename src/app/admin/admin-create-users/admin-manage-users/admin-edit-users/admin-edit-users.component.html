@@ -1,0 +1,86 @@
+ <!-- Morris chart - Sales -->
+              <div class="box-header " >
+       
+            <h3 class="box-title"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"></i> Update User Record</h3>
+                  <!-- Tabs within a box -->
+          
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+              <!--<button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove">
+                  <i class="fa fa-times"></i></button>
+            </div>-->
+            <!-- /. tools -->
+          </div>
+      
+          <div class="box-body">
+            
+            
+            <form [formGroup] = "editUser" (ngSubmit)="updateUser(editUser.value); editUser.reset()">
+             
+              <div class="form-group">
+                <label >Firstname</label>
+                <input type="text" formControlName = "firstName"  class="form-control" name="firstname"  placeholder="firstname" value = "{{firstName}}" required>
+                <div *ngIf="formErrors.firstName" class="label label-danger">
+                    {{ formErrors.firstName }}
+                 </div>
+              </div>
+               <div class="form-group">
+                <label >Lastname</label>
+                <input type="text" formControlName = "lastName" class="form-control" name="lastname" placeholder="lasttname" value="{{lastName}}" required>
+                <div *ngIf="formErrors.lastName" class="label label-danger">
+                    {{ formErrors.lastName }}
+                 </div>
+              </div>
+              <div class="form-group">
+                <label >Department</label>
+           
+                <input type="text" formControlName = "department" class="form-control" name="dept" placeholder="Department" value="{{department}}" required>
+                <div *ngIf="formErrors.department" class="label label-danger">
+                    {{ formErrors.department }}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>Position</label>
+                
+                <input type="text" formControlName = "position" class="form-control" name="postion" placeholder="position" value="{{position}}" required>
+                
+               <div *ngIf="formErrors.position" class="label label-danger">
+                    {{ formErrors.position }}
+                  </div>
+              </div>
+              <div class="form-group has-feedback">
+                <label>Email</label>
+               <input type="email" formControlName = "email" class="form-control " name="email" placeholder="create username" aria-describedby="basic-addon2" value="{{email}}" required>
+               <span class="glyphicon glyphicon-envelope form-control-feedback"> @nde.gov.ng</span>
+                <!--<span class="input-group-addon" id="basic-addon2">@nde.gov.ng</span>-->
+               
+               <div *ngIf="formErrors.email" class="label label-danger">
+                    {{ formErrors.email }}
+                  </div>
+              </div>
+              <div class="form-group">
+               <label>Password</label>
+                 <input type="text" formControlName = "password" class="form-control" name="subject" placeholder="create password" value="{{password}}" required>
+                
+               <div *ngIf="formErrors.password" class="label label-danger">
+                    {{ formErrors.password }}
+                  </div>
+              </div>
+<!--            
+              <div>
+                <textarea class="textarea" placeholder="Role Description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </div>-->
+              <div class="box-footer clearfix">
+                <button type="submit" class="pull-right btn btn-default" id="sendEmail">Update 
+                    <i class="fa fa-arrow-circle-right"></i></button>
+              </div>
+            </form>
+          </div>
+        
+        </div>
+       
+          <!--<div class="box-footer clearfix">
+            <button type="button" class="pull-right btn btn-default" id="sendEmail">Create user
+                <i class="fa fa-arrow-circle-right"></i></button>
+          </div>-->
+        

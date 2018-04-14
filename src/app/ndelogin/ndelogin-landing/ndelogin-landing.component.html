@@ -1,0 +1,57 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 nde_bkg">
+       <div class="text">
+         <a href="#"><b>Procurement</b> - Manager</a>
+         <ul class="fa-ul">
+           <li><span class="fa fa-user-circle-o  "></span>  Manage User Roles</li>
+           <li><span class="fa fa-briefcase  "></span> Manage Project Procurement</li>
+           <li><span class="fa fa-users  "></span> Manage Bidders/Consultants</li>
+           <li><span class="fa fa-certificate  "></span> Manage Contract Award</li>
+         </ul>
+         </div>
+   
+    </div>
+    <div class="col-md-6">
+      <div class="login-box">
+ 
+  <div class="login-logo" style="margin-top:40% !important">
+     <a href="#">Sign in to start your session</a>
+  </div>
+  <!-- /.login-logo -->
+  <div class="login-box-body">
+      <form [formGroup] = "ndelogin" (ngSubmit)="loginNde(ndelogin.value); ndelogin.reset()">
+      <div class="form-group has-feedback">
+        <input type="email" class="form-control" formControlName="username" placeholder="Email">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+        
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button *ngIf="loggedIn == false"  type="submit" class="btn btn-primary btn-block btn-flat">
+           
+            Sign In</button>
+            <button *ngIf="loggedIn == true" type="submit" class="btn btn-primary btn-block btn-flat">
+            <i  class="fa fa-refresh fa-spin fa-1x fa-fw" aria-hidden="true"></i>
+                <span class="sr-only">Refreshing...</span> 
+                 Sign In
+            </button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+
+  </div>
+  <!-- /.login-box-body -->
+</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+  <!-- TO DO List -->
+        <div class="col-md-12 content"  >
+          <div class="box-header">
+            <i class="ion ion-clipboard"></i>
+
+            <h3 class="box-title">Positon Listing</h3>
+
+            <div class="box-tools pull-right">
+              <ul class="pagination pagination-sm inline">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <ul class="todo-list">
+              <li *ngFor="let pos of positions">
+                <span class="handle">
+                        <i class="fa fa-ellipsis-v"></i>
+                        <i class="fa fa-ellipsis-v"></i>
+                      </span>
+                <input type="checkbox" value="">
+                <span class="text">{{pos.title}} </span>
+                  <!--<br><i style="font-size:12px !important; ">{{users.department}} {{users.position}}</i></span>-->
+                
+                <!--<small class="label label-info"><i class="fa fa-clock-o"></i> 4 hours</small>-->
+                <div class="tools">
+                  
+                  <a class="btn btn-default btn-sm" type="button"   [routerLink]="['/admin/createposition/editposition', pos._id]"><i class="fa fa-edit fa-lg"></i> Edit</a>
+                  <a class="btn btn-default btn-sm" type="button" (click)="removePosition(pos._id)"><i class="fa fa-trash-o" ></i>Delete</a>
+                </div>
+              </li>
+           
+          
+            </ul>
+          </div>
+          <!-- /.box-body -->
+          <!--<div class="box-footer clearfix no-border">
+            <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item</button>
+          </div>-->
+        </div>

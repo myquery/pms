@@ -1,0 +1,20 @@
+<div class="container ">
+  <div class="create-user">
+      <div class="box box-info" style="width:70% !important; margin:5% 20% !important">
+             <div class="nav-tabs-custom">
+          <!-- Tabs within a box -->
+             <ul class="nav nav-tabs pull-right">
+                       
+                
+                 <li routerLinkActive="active" ><a  [routerLink] = "['/admin/projects/addprojects']" >Add New Projects</a></li>
+                 <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" ><a  [routerLink] = "['/admin/projects/listprojects']" >Projects Listing</a></li>
+                  
+             </ul>
+          <div class="no-padding">
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+        
+  </div>
+</div>
+</div>

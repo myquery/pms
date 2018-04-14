@@ -1,0 +1,54 @@
+ <!-- Morris chart - Sales -->
+              <div class="box-header " >
+            <i class="fa fa-user-o"></i>
+
+            <h3 class="box-title">Assign Role to <small class="label label-info">{{fname}} {{lname}}</small></h3>
+           <hr>
+                  <!-- Tabs within a box -->
+          
+            <!-- tools box -->
+            <div class="pull-right box-tools">
+              <!--<button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip" title="Remove">
+                  <i class="fa fa-times"></i></button>
+            </div>-->
+            <!-- /. tools -->
+          </div>
+          <div class="box-body">
+            <form [formGroup] ="roles"  (ngSubmit)="assignRole(roles.value)">
+              <div class="form-group">
+                <label class="form-check-label">
+                  <input class="form-check-input" formControlName="awardletter" type="checkbox"> Generate contract Award Letter
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-check-label">
+                  <input class="form-check-input" formControlName="contractors" type="checkbox">List contractors for a project
+                </label>
+              </div>
+               <div class="form-group">
+                <label class="form-check-label">
+                  <input class="form-check-input" formControlName="consultants" type="checkbox">List consultants for a project
+                </label>
+              </div>
+              <div class="form-group">
+                <label class="form-check-label">
+                  <input class="form-check-input" formControlName="newproject" type="checkbox">Create new projects
+                </label>
+              </div>
+               <div class="form-group">
+                <label class="form-check-label">
+                  <input class="form-check-input" formControlName="newuser" type="checkbox">Create new Users
+                </label>
+              </div>
+                        
+              <div>
+                <textarea class="textarea" placeholder="Role Description" formControlName="description" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
+              </div>
+                 <div class="box-footer clearfix">
+            <button type="submit" class="pull-right btn btn-default" id="sendEmail">Assign Roles
+                <i class="fa fa-arrow-circle-right"></i></button>
+          </div>
+            </form>
+          </div>
+       
+        </div>

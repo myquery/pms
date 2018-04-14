@@ -1,0 +1,41 @@
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.2) !important;
+}
+.fa:not(span){
+  font-size: 12px !important
+}
+
+.nde_bkg{
+   position : relative;
+   height: 670px;
+   background: linear-gradient(
+     rgba(155, 244, 66, 0.4),
+    rgba(35, 68, 2, 0.8)
+   ),
+   url('./../../../assets/img/NDE-PNG.png');
+   background-size: cover
+}
+
+.nde_bkg .text > a{
+   
+    color: #fff !important;
+    line-height: 300px;
+    font-size: 50px;
+    text-align: center
+
+}
+ul{
+  font-size: 30px;
+  color: #fff
+}
+ul li{
+  list-style: none !important;
+ 
+}

@@ -1,0 +1,83 @@
+  <!-- TO DO List -->
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">List Companies</h3>
+
+              <div class="box-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover">
+                <tr>
+                   <th>#</th>
+                  <th>Compnay Name</th>
+                  <th>Contact Person</th>
+                  <th>Company Details</th>
+                  <th></th>
+                </tr>
+                <tr *ngFor="let coy of companies; let i = index" >
+                 <td>{{i + 1}}</td>
+                  <td> <b>{{coy.name}}</b><br>
+                 <span class="label label-success"> RegNo: {{coy.registrationNumber}}</span><br>
+                  <span class="label label-warning">TIN: {{coy.tin}}</span>
+                  </td>
+                  <td>
+                    <i class="fa fa-user fa-xs"></i>  {{coy.contactPerson.fullName}}<br>
+                    <i class="fa fa-envelope fa-xs"></i>  {{coy.contactPerson.email}}<br>
+                    <i class="fa  fa-phone-square fa-xs"></i>  {{coy.contactPerson.phone}}
+
+                  </td>
+                  
+                  <td>
+                   <i class="fa fa-road fa-xs"></i> {{coy.contactInfo.street1}}<br>
+                    <i class="fa fa-envelope fa-xs"></i>  {{coy.contactInfo.email}}<br>
+                    <i class="fa  fa-phone-square fa-xs"></i>  {{coy.contactInfo.phone}}<br>
+                   <i class="fa  fa-globe fa-xs"></i>  <a href="http://{{coy.contactInfo.website}}" target="_blank">{{coy.contactInfo.website}}</a>
+                                
+                    
+
+
+
+                  </td>
+                  <td>
+                    <div class="tools">
+                  
+                  <a class="btn btn-default btn-xs" type="button"   [routerLink]="['/admin/createcompany/editcompany', coy._id]"><i class="fa fa-edit fa-lg"></i> Edit</a>
+                  <a *ngIf="delete == false" class="btn btn-default btn-xs" type="button" (click)="removeCompany(coy._id)"><i class="fa fa-trash-o" ></i>Delete</a>
+                <a *ngIf="delete == true" class="btn btn-default btn-xs" type="button" >
+                <i class="fa fa-refresh fa-spin fa-3x fa-fw" aria-hidden="true"></i>
+                <span class="sr-only">Refreshing...</span> Delete
+                </a>
+                </div>
+                  </td>
+                </tr>
+            
+              </table>
+             <hr>
+               <div class="box-tools pull-right ipage">
+              <ul class="pagination pagination-sm inline">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+            
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+
